@@ -1,0 +1,23 @@
+version: 1
+product: Mobile Taxi
+page: /
+
+visualHierarchy:
+  skill: Visual Hierarchy
+  display:
+    selector: h1
+    fontFamily: display
+    fontSize: "clamp(2.125rem, 10vw, 3rem)"
+  brand:
+    fontFamily: display
+    fontSize: "clamp(1.75rem, 7vw, 2.25rem)"
+  section:
+    selector: h2
+    fontSize: "clamp(1.25rem, 4vw, 1.5rem)"
+  lead:
+    fontSize: "clamp(1rem, 3.5vw, 1.125rem)"
+  metadata:
+    fontSize: "0.8125rem"
+  eyebrow:
+    fontSize: "0.75rem"
+    textTransform: uppercase
