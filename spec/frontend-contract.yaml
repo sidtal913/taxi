@@ -41,6 +41,13 @@ spacing:
     - --space-7
     - --space-8
 
+touchTargets:
+  minimumPx: 44
+  craftMarkers:
+    - min-h-11
+    - min-w-11
+    - 44px
+
 grid:
   maxWidth: 1440px
   contentMaxWidth: 1440px

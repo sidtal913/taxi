@@ -14,8 +14,8 @@ export default async function HomePage({ searchParams }: PageProps) {
       className="app-shell craft-ux-grid grid-max-width"
       style={{
         maxWidth: "min(430px, var(--grid-max-width))",
-        paddingInline: "var(--grid-margin-mobile)",
-        gap: "var(--space-1)",
+        paddingInline: "var(--spacing-16)",
+        gap: "var(--spacing-8)",
       }}
     >
       <AppHeader />

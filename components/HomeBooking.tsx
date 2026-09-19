@@ -63,6 +63,7 @@ export function HomeBooking({ initialView }: HomeBookingProps) {
                   placeholder="Pickup location"
                   value={pickup}
                   onChange={(e) => setPickup(e.target.value)}
+                  className="touch-target min-h-11"
                   style={inputStyle}
                 />
               </span>
@@ -80,6 +81,7 @@ export function HomeBooking({ initialView }: HomeBookingProps) {
                   placeholder="Dropoff destination"
                   value={dropoff}
                   onChange={(e) => setDropoff(e.target.value)}
+                  className="touch-target min-h-11"
                   style={inputStyle}
                 />
               </span>
@@ -135,11 +137,12 @@ export function HomeBooking({ initialView }: HomeBookingProps) {
           <motion.button
             type="button"
             onClick={handleBook}
+            className="touch-target min-h-11 w-full"
             whileTap={reduceMotion ? undefined : { scale: 0.97 }}
             transition={{ duration: 0.14, ease: [0.23, 1, 0.32, 1] }}
             style={{
               width: "100%",
-              minHeight: "var(--space-5)",
+              minHeight: "44px",
               border: "none",
               borderRadius: "var(--radius-md)",
               background: "var(--color-accent)",
@@ -170,7 +173,7 @@ export function HomeBooking({ initialView }: HomeBookingProps) {
 
 const inputStyle: CSSProperties = {
   flex: 1,
-  minHeight: 44,
+  minHeight: "44px",
   padding: "var(--space-control) var(--space-control)",
   borderRadius: "var(--radius-sm)",
   border: "1px solid var(--color-border)",

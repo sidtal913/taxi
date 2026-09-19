@@ -64,7 +64,7 @@ export function CategoryCard({
         cursor: "pointer",
         transition: "border-color 200ms var(--ease-out), background 200ms var(--ease-out)",
       }}
-      className="category-card"
+      className="category-card touch-target min-h-11"
     >
       <div
         className="category-card-image"
@@ -139,11 +139,14 @@ export function CategoryCard({
           aria-label={wishlisted ? `Remove ${category.name} from saved rides` : `Save ${category.name}`}
           aria-pressed={wishlisted}
           onClick={onWishlistToggle}
+          className="touch-target min-h-11 min-w-11"
           whileTap={reduceMotion ? undefined : { scale: 0.92 }}
           style={{
             display: "inline-flex",
             alignItems: "center",
             justifyContent: "center",
+            minWidth: "44px",
+            minHeight: "44px",
             width: 44,
             height: 44,
             border: "1px solid var(--color-border)",
@@ -159,11 +162,14 @@ export function CategoryCard({
           type="button"
           aria-label={`Quick select ${category.name}`}
           onClick={onQuickSelect}
+          className="touch-target min-h-11 min-w-11"
           whileTap={reduceMotion ? undefined : { scale: 0.92 }}
           style={{
             display: "inline-flex",
             alignItems: "center",
             justifyContent: "center",
+            minWidth: "44px",
+            minHeight: "44px",
             width: 44,
             height: 44,
             border: "none",

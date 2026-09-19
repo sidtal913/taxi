@@ -65,6 +65,14 @@
   --space-6: 64px;
   --space-7: 96px;
   --space-8: 128px;
+  --spacing-8: 8px;
+  --spacing-16: 16px;
+  --spacing-24: 24px;
+  --spacing-32: 32px;
+  --spacing-48: 48px;
+  --spacing-64: 64px;
+  --spacing-96: 96px;
+  --spacing-128: 128px;
 
   /* CRAFT_UX grid markers */
   --grid-max-width: 1440px;
@@ -90,6 +98,27 @@
 
 .grid-max-width {
   max-width: var(--grid-max-width);
+}
+
+/* CRAFT_UX touch targets — minimum 44×44px (min-h-11 / min-w-11 markers) */
+.min-h-11 {
+  min-height: 44px;
+}
+
+.min-w-11 {
+  min-width: 44px;
+}
+
+.touch-target {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+input.touch-target,
+button.touch-target,
+a.touch-target,
+[role="button"].touch-target {
+  min-height: 44px;
 }
 
 .type-display,
@@ -275,6 +304,7 @@ body {
   text-decoration: none;
   color: inherit;
   min-height: 44px;
+  min-width: 44px;
 }
 
 .app-header__nav {
@@ -288,9 +318,14 @@ body {
 .app-header__nav-link {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   min-height: 44px;
   min-width: 44px;
   padding: 0 var(--space-control);
+}
+
+.category-card.touch-target {
+  min-height: 44px;
 }
 
 .booking-sticky {
