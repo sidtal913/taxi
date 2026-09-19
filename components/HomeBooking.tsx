@@ -1,18 +1,16 @@
 "use client";
 
 import { useCallback, useMemo, useState, type CSSProperties } from "react";
-import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
-import { AppHeader } from "./AppHeader";
 import { CategoryCard, type TaxiCategory } from "./CategoryCard";
 import { PinIcon } from "./icons";
 import categoriesFixture from "@/data/taxi-categories.json";
 
-type HomeScreenProps = {
+type HomeBookingProps = {
   initialView?: string;
 };
 
-export function HomeScreen({ initialView }: HomeScreenProps) {
+export function HomeBooking({ initialView }: HomeBookingProps) {
   const categories = categoriesFixture as TaxiCategory[];
   const reduceMotion = useReducedMotion();
 
@@ -39,85 +37,17 @@ export function HomeScreen({ initialView }: HomeScreenProps) {
   }, [dropoff, pickup, selected]);
 
   return (
-    <div className="app-shell">
-      <AppHeader />
-
+    <>
       {viewBanner && (
         <p
           role="status"
-          style={{
-            margin: 0,
-            padding: "12px 16px",
-            fontSize: "0.875rem",
-            background: "rgba(245, 197, 24, 0.12)",
-            borderBottom: "1px solid var(--color-border)",
-            color: "var(--color-text)",
-          }}
+          className="view-banner"
         >
           {viewBanner}
         </p>
       )}
 
       <main style={{ flex: 1, display: "flex", flexDirection: "column" }}>
-        <section
-          aria-label="City hero"
-          style={{
-            position: "relative",
-            height: "clamp(140px, 28vh, 200px)",
-            flexShrink: 0,
-          }}
-        >
-          <Image
-            src="/images/hero-city-taxi.jpg"
-            alt="Yellow taxi on a city street at dusk"
-            fill
-            priority
-            sizes="430px"
-            style={{ objectFit: "cover" }}
-          />
-          <div
-            style={{
-              position: "absolute",
-              inset: 0,
-              background:
-                "linear-gradient(180deg, rgba(12,15,20,0.15) 0%, rgba(12,15,20,0.75) 100%)",
-            }}
-          />
-          <div
-            style={{
-              position: "absolute",
-              left: 16,
-              right: 16,
-              bottom: 16,
-            }}
-          >
-            <p
-              style={{
-                margin: 0,
-                fontSize: "0.75rem",
-                textTransform: "uppercase",
-                letterSpacing: "0.12em",
-                color: "var(--color-accent)",
-                fontWeight: 600,
-              }}
-            >
-              Ride in minutes
-            </p>
-            <h1
-              style={{
-                margin: "4px 0 0",
-                fontFamily: "var(--font-display)",
-                fontSize: "clamp(1.5rem, 5vw, 1.75rem)",
-                fontWeight: 700,
-                lineHeight: 1.15,
-                letterSpacing: "-0.03em",
-              }}
-            >
-              Where to tonight?
-            </h1>
-          </div>
-        </section>
-
         <section
           aria-labelledby="locations-heading"
           style={{ padding: "16px 16px 8px", flexShrink: 0 }}
@@ -141,7 +71,7 @@ export function HomeScreen({ initialView }: HomeScreenProps) {
                 From
               </span>
               <span style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                <PinIcon className="" />
+                <PinIcon />
                 <input
                   type="text"
                   name="pickup"
@@ -158,7 +88,7 @@ export function HomeScreen({ initialView }: HomeScreenProps) {
                 To
               </span>
               <span style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                <PinIcon className="" />
+                <PinIcon />
                 <input
                   type="text"
                   name="dropoff"
@@ -283,7 +213,7 @@ export function HomeScreen({ initialView }: HomeScreenProps) {
           Safe rides across the city · Licensed drivers · 24/7 support · v1.0.0 (fixture data only)
         </p>
       </footer>
-    </div>
+    </>
   );
 }
 
