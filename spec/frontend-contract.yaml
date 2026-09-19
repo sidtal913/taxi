@@ -1,0 +1,57 @@
+version: 1
+product: Mobile Taxi
+page: /
+
+skills:
+  - Visual Hierarchy
+  - Design Engineering
+
+visualHierarchy:
+  skill: Visual Hierarchy
+  expressive: true
+  display:
+    selector: h1
+    fontFamily: display
+    fontSize: "clamp(2.125rem, 10vw, 3rem)"
+  brand:
+    fontFamily: display
+    fontSize: "clamp(1.75rem, 7vw, 2.25rem)"
+  section:
+    selector: h2
+    fontSize: "clamp(1.25rem, 4vw, 1.5rem)"
+  lead:
+    fontSize: "clamp(1rem, 3.5vw, 1.125rem)"
+  metadata:
+    fontSize: "0.8125rem"
+  eyebrow:
+    fontSize: "0.75rem"
+    textTransform: uppercase
+
+spacing:
+  craftUxScale: 8px
+  tokens:
+    - --space-micro
+    - --space-control
+    - --space-1
+    - --space-2
+    - --space-3
+    - --space-4
+    - --space-5
+    - --space-6
+    - --space-7
+    - --space-8
+
+touchTargets:
+  minimumPx: 44
+  craftMarkers:
+    - min-h-11
+    - min-w-11
+    - 44px
+
+grid:
+  maxWidth: 1440px
+  contentMaxWidth: 1440px
+  columnsDesktop: 12
+  marginMobile: 16px
+  marginDesktop: 64px
+  gutter: 24px

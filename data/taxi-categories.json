@@ -1,0 +1,46 @@
+[
+  {
+    "id": "luxe",
+    "name": "Luxe",
+    "description": "Premium sedans & executive comfort",
+    "priceFrom": 24.5,
+    "currency": "USD",
+    "capacity": 4,
+    "etaMinutes": 4,
+    "image": "/images/categories/luxe.jpg",
+    "icon": "luxe"
+  },
+  {
+    "id": "economy",
+    "name": "Economy",
+    "description": "Everyday rides at the best value",
+    "priceFrom": 12.9,
+    "currency": "USD",
+    "capacity": 4,
+    "etaMinutes": 3,
+    "image": "/images/categories/economy.jpg",
+    "icon": "economy"
+  },
+  {
+    "id": "green",
+    "name": "Green",
+    "description": "Hybrid & electric, lower emissions",
+    "priceFrom": 15.5,
+    "currency": "USD",
+    "capacity": 4,
+    "etaMinutes": 5,
+    "image": "/images/categories/green.jpg",
+    "icon": "green"
+  },
+  {
+    "id": "van",
+    "name": "Van",
+    "description": "Groups, luggage & airport runs",
+    "priceFrom": 32.0,
+    "currency": "USD",
+    "capacity": 6,
+    "etaMinutes": 7,
+    "image": "/images/categories/van.jpg",
+    "icon": "van"
+  }
+]

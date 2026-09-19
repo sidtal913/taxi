@@ -1,23 +1,35 @@
 {
-  "name": "mobile-taxi-infra",
+  "name": "mobile-taxi",
   "version": "1.0.0",
-  "description": "Mobile Taxi infrastructure as code (Terraform)",
+  "description": "Mobile Taxi — iOS-style booking home (Next.js + Expo-ready UI patterns)",
   "private": true,
   "scripts": {
-    "test": "echo \"No tests for infrastructure code\" && exit 0",
-    "build": "echo \"Terraform infrastructure - use terraform plan/apply\" && exit 0"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vpods/taxi.git"
+    "url": "git+https://github.com/sidtal913/taxi.git"
   },
-  "keywords": [
-    "terraform",
-    "infrastructure",
-    "aws",
-    "s3",
-    "cloudfront"
-  ],
+  "dependencies": {
+    "framer-motion": "^11.18.2",
+    "next": "^15.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "eslint": "^9.17.0",
+    "eslint-config-next": "^15.1.0",
+    "postcss": "^8.5.28",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5.7.2"
+  },
   "author": "VPods",
   "license": "UNLICENSED"
 }

@@ -1,3 +1,6 @@
+node_modules/
+.next/
+out/
 .terraform/
 infra/terraform.tfstate
 infra/terraform.tfstate.backup
