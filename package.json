@@ -1,0 +1,23 @@
+{
+  "name": "mobile-taxi-infra",
+  "version": "1.0.0",
+  "description": "Mobile Taxi infrastructure as code (Terraform)",
+  "private": true,
+  "scripts": {
+    "test": "echo \"No tests for infrastructure code\" && exit 0",
+    "build": "echo \"Terraform infrastructure - use terraform plan/apply\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vpods/taxi.git"
+  },
+  "keywords": [
+    "terraform",
+    "infrastructure",
+    "aws",
+    "s3",
+    "cloudfront"
+  ],
+  "author": "VPods",
+  "license": "UNLICENSED"
+}
