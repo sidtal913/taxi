@@ -34,7 +34,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${display.variable} ${ui.variable}`}>
-      <body>{children}</body>
+      <body>
+        <div
+          className="craft-ux-grid grid-max-width"
+          style={{
+            maxWidth: "var(--grid-max-width)",
+            minHeight: "100dvh",
+          }}
+        >
+          {children}
+        </div>
+      </body>
     </html>
   );
 }

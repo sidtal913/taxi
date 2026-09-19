@@ -53,9 +53,9 @@ export function CategoryCard({
         position: "relative",
         display: "grid",
         gridTemplateColumns: "96px 1fr auto",
-        gap: 12,
+        gap: "var(--space-control)",
         alignItems: "center",
-        padding: 12,
+        padding: "var(--space-control)",
         borderRadius: "var(--radius-md)",
         border: selected
           ? "2px solid var(--color-accent)"
@@ -86,7 +86,7 @@ export function CategoryCard({
         />
       </div>
       <div style={{ minWidth: 0 }}>
-        <div style={{ display: "flex", alignItems: "baseline", gap: 8 }}>
+        <div style={{ display: "flex", alignItems: "baseline", gap: "var(--space-1)" }}>
           <h3 className="type-section-title" style={{ fontSize: "1.0625rem", margin: 0 }}>
             {category.name}
           </h3>
@@ -94,7 +94,7 @@ export function CategoryCard({
         </div>
         <p
           style={{
-            margin: "4px 0 0",
+            margin: "var(--space-micro) 0 0",
             fontSize: "0.8125rem",
             color: "var(--color-text-muted)",
             whiteSpace: "nowrap",
@@ -106,10 +106,10 @@ export function CategoryCard({
         </p>
         <div
           style={{
-            marginTop: 6,
+            marginTop: "var(--space-1)",
             display: "flex",
             alignItems: "center",
-            gap: 12,
+            gap: "var(--space-control)",
             fontSize: "0.8125rem",
           }}
         >
@@ -120,7 +120,7 @@ export function CategoryCard({
             style={{
               display: "inline-flex",
               alignItems: "center",
-              gap: 4,
+              gap: "var(--space-micro)",
               color: "var(--color-text-muted)",
             }}
           >
@@ -130,7 +130,7 @@ export function CategoryCard({
         </div>
       </div>
       <div
-        style={{ display: "flex", flexDirection: "column", gap: 8 }}
+        style={{ display: "flex", flexDirection: "column", gap: "var(--space-1)" }}
         onClick={(e) => e.stopPropagation()}
         onKeyDown={(e) => e.stopPropagation()}
       >

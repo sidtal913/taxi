@@ -9,53 +9,21 @@ const navItems = [
 
 export function AppHeader() {
   return (
-    <header
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        padding: "12px 16px",
-        borderBottom: "1px solid var(--color-border)",
-        background: "var(--color-surface)",
-      }}
-    >
-      <Link
-        href="/"
-        aria-label="Mobile Taxi home"
-        style={{
-          display: "flex",
-          alignItems: "center",
-          gap: 10,
-          textDecoration: "none",
-          color: "inherit",
-          minHeight: 44,
-        }}
-      >
+    <header className="app-header">
+      <Link href="/" aria-label="Mobile Taxi home" className="app-header__brand">
         <TaxiLogo />
         <span className="type-section-title" style={{ fontSize: "1.125rem" }}>
           Mobile Taxi
         </span>
       </Link>
       <nav aria-label="Primary">
-        <ul
-          style={{
-            display: "flex",
-            gap: 4,
-            listStyle: "none",
-            margin: 0,
-            padding: 0,
-          }}
-        >
+        <ul className="app-header__nav">
           {navItems.map((item) => (
             <li key={item.label}>
               <Link
                 href={item.href}
+                className="app-header__nav-link"
                 style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  minHeight: 44,
-                  minWidth: 44,
-                  padding: "0 10px",
                   fontSize: "0.875rem",
                   fontWeight: 500,
                   color: "var(--color-text-muted)",

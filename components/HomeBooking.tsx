@@ -39,38 +39,22 @@ export function HomeBooking({ initialView }: HomeBookingProps) {
   return (
     <>
       {viewBanner && (
-        <p
-          role="status"
-          className="view-banner"
-        >
+        <p role="status" className="view-banner">
           {viewBanner}
         </p>
       )}
 
       <main style={{ flex: 1, display: "flex", flexDirection: "column" }}>
-        <section
-          aria-labelledby="locations-heading"
-          style={{ padding: "16px 16px 8px", flexShrink: 0 }}
-        >
+        <section aria-labelledby="locations-heading" className="section-pad" style={{ flexShrink: 0 }}>
           <h2 id="locations-heading" className="visually-hidden">
             Pickup and dropoff
           </h2>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: 12,
-              padding: 16,
-              borderRadius: "var(--radius-md)",
-              background: "var(--color-surface)",
-              border: "1px solid var(--color-border)",
-            }}
-          >
-            <label style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+          <div className="surface-panel stack-control">
+            <label className="stack-8">
               <span style={{ fontSize: "0.8125rem", fontWeight: 600, color: "var(--color-text-muted)" }}>
                 From
               </span>
-              <span style={{ display: "flex", alignItems: "center", gap: 10 }}>
+              <span style={{ display: "flex", alignItems: "center", gap: "var(--space-1)" }}>
                 <PinIcon />
                 <input
                   type="text"
@@ -83,11 +67,11 @@ export function HomeBooking({ initialView }: HomeBookingProps) {
                 />
               </span>
             </label>
-            <label style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+            <label className="stack-8">
               <span style={{ fontSize: "0.8125rem", fontWeight: 600, color: "var(--color-text-muted)" }}>
                 To
               </span>
-              <span style={{ display: "flex", alignItems: "center", gap: 10 }}>
+              <span style={{ display: "flex", alignItems: "center", gap: "var(--space-1)" }}>
                 <PinIcon />
                 <input
                   type="text"
@@ -103,23 +87,15 @@ export function HomeBooking({ initialView }: HomeBookingProps) {
           </div>
         </section>
 
-        <section
-          aria-labelledby="categories-heading"
-          style={{ padding: "8px 16px 16px", flex: 1 }}
-        >
-          <h2 id="categories-heading" className="type-section-title" style={{ marginBottom: 12 }}>
+        <section aria-labelledby="categories-heading" className="section-pad-tight" style={{ flex: 1 }}>
+          <h2
+            id="categories-heading"
+            className="type-section-title"
+            style={{ marginBottom: "var(--space-control)" }}
+          >
             Choose your ride
           </h2>
-          <ul
-            style={{
-              listStyle: "none",
-              margin: 0,
-              padding: 0,
-              display: "flex",
-              flexDirection: "column",
-              gap: 10,
-            }}
-          >
+          <ul className="category-list">
             {categories.map((category) => (
               <li key={category.id}>
                 <CategoryCard
@@ -143,20 +119,12 @@ export function HomeBooking({ initialView }: HomeBookingProps) {
           </ul>
         </section>
 
-        <div
-          style={{
-            position: "sticky",
-            bottom: 0,
-            padding: "12px 16px 16px",
-            background: "linear-gradient(180deg, transparent, var(--color-bg) 24%)",
-            borderTop: "1px solid var(--color-border)",
-          }}
-        >
+        <div className="booking-sticky">
           {bookFeedback && (
             <p
               role="status"
               style={{
-                margin: "0 0 12px",
+                margin: "0 0 var(--space-control)",
                 fontSize: "0.8125rem",
                 color: "var(--color-success)",
               }}
@@ -171,7 +139,7 @@ export function HomeBooking({ initialView }: HomeBookingProps) {
             transition={{ duration: 0.14, ease: [0.23, 1, 0.32, 1] }}
             style={{
               width: "100%",
-              minHeight: 52,
+              minHeight: "var(--space-5)",
               border: "none",
               borderRadius: "var(--radius-md)",
               background: "var(--color-accent)",
@@ -180,7 +148,7 @@ export function HomeBooking({ initialView }: HomeBookingProps) {
               fontSize: "1.0625rem",
               fontWeight: 700,
               cursor: "pointer",
-              boxShadow: "0 8px 24px rgba(245, 197, 24, 0.25)",
+              boxShadow: "0 var(--space-1) var(--space-3) rgba(245, 197, 24, 0.25)",
             }}
           >
             Book Now — {selected.name}
@@ -188,17 +156,8 @@ export function HomeBooking({ initialView }: HomeBookingProps) {
         </div>
       </main>
 
-      <footer
-        id="help"
-        style={{
-          padding: "20px 16px 24px",
-          borderTop: "1px solid var(--color-border)",
-          background: "var(--color-surface)",
-          fontSize: "0.8125rem",
-          color: "var(--color-text-muted)",
-        }}
-      >
-        <p style={{ margin: "0 0 8px", fontWeight: 600, color: "var(--color-text)" }}>
+      <footer id="help" className="site-footer">
+        <p style={{ margin: "0 0 var(--space-1)", fontWeight: 600, color: "var(--color-text)" }}>
           Mobile Taxi
         </p>
         <p style={{ margin: 0 }}>
@@ -212,7 +171,7 @@ export function HomeBooking({ initialView }: HomeBookingProps) {
 const inputStyle: CSSProperties = {
   flex: 1,
   minHeight: 44,
-  padding: "10px 12px",
+  padding: "var(--space-control) var(--space-control)",
   borderRadius: "var(--radius-sm)",
   border: "1px solid var(--color-border)",
   background: "var(--color-surface-elevated)",

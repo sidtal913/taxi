@@ -2,8 +2,13 @@ version: 1
 product: Mobile Taxi
 page: /
 
+skills:
+  - Visual Hierarchy
+  - Design Engineering
+
 visualHierarchy:
   skill: Visual Hierarchy
+  expressive: true
   display:
     selector: h1
     fontFamily: display
@@ -21,3 +26,25 @@ visualHierarchy:
   eyebrow:
     fontSize: "0.75rem"
     textTransform: uppercase
+
+spacing:
+  craftUxScale: 8px
+  tokens:
+    - --space-micro
+    - --space-control
+    - --space-1
+    - --space-2
+    - --space-3
+    - --space-4
+    - --space-5
+    - --space-6
+    - --space-7
+    - --space-8
+
+grid:
+  maxWidth: 1440px
+  contentMaxWidth: 1440px
+  columnsDesktop: 12
+  marginMobile: 16px
+  marginDesktop: 64px
+  gutter: 24px

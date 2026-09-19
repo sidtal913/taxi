@@ -10,7 +10,14 @@ export default async function HomePage({ searchParams }: PageProps) {
   const params = await searchParams;
 
   return (
-    <div className="app-shell">
+    <div
+      className="app-shell craft-ux-grid grid-max-width"
+      style={{
+        maxWidth: "min(430px, var(--grid-max-width))",
+        paddingInline: "var(--grid-margin-mobile)",
+        gap: "var(--space-1)",
+      }}
+    >
       <AppHeader />
 
       <section
