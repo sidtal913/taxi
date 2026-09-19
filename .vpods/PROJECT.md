@@ -47,3 +47,7 @@ Requires: delivery-order 1
 
 Create Terraform module under infra/ to provision one S3 bucket for static website hosting in VPods Trial AWS account. Bucket name: mobile-taxi-trial-{random-suffix}. Enable static website hosting (index.html). Set public read ACL on bucket and objects. Optional: add CloudFront distribution (us-east-1 origin, cache TTL 3
 [completed/completed] Terraform…
+
+## Prior ships (integrated on vpods/hire)
+
+- **task_e78eb525** (2026-09-19) — Mobile Taxi iOS Home Page – Booking Flow UI · rae
