@@ -87,19 +87,10 @@ export function CategoryCard({
       </div>
       <div style={{ minWidth: 0 }}>
         <div style={{ display: "flex", alignItems: "baseline", gap: 8 }}>
-          <h3
-            style={{
-              margin: 0,
-              fontFamily: "var(--font-display)",
-              fontSize: "1.0625rem",
-              fontWeight: 700,
-            }}
-          >
+          <h3 className="type-section-title" style={{ fontSize: "1.0625rem", margin: 0 }}>
             {category.name}
           </h3>
-          <span style={{ fontSize: "0.8125rem", color: "var(--color-text-muted)" }}>
-            ~{category.etaMinutes} min
-          </span>
+          <span className="type-metadata">~{category.etaMinutes} min</span>
         </div>
         <p
           style={{

@@ -13,6 +13,7 @@ export default async function HomePage({ searchParams }: PageProps) {
     <div className="app-shell">
       <AppHeader />
 
+      {/* Visual hierarchy: eyebrow → brand display → display headline → lead */}
       <section
         className="home-hero"
         aria-label="City hero"
@@ -32,9 +33,23 @@ export default async function HomePage({ searchParams }: PageProps) {
         />
         <div className="home-hero__overlay" aria-hidden />
         <div className="home-hero__copy">
-          <p className="home-hero__eyebrow">Ride in minutes</p>
-          <h1 className="home-hero__title">Where to tonight?</h1>
+          <p className="type-eyebrow">Ride in minutes</p>
+          <p className="type-brand-display">Mobile Taxi</p>
+          <h1 className="type-display">Where to tonight?</h1>
+          <p className="type-lead">
+            City-wide pickup. Four ride classes. Confirm in one tap.
+          </p>
         </div>
+      </section>
+
+      <section aria-labelledby="home-type-intro" className="home-type-intro">
+        <h2 id="home-type-intro" className="type-section-title">
+          Your route, your ride
+        </h2>
+        <p className="type-metadata">
+          Set From and To, compare Luxe, Economy, Green, and Van — static fares for
+          this demo.
+        </p>
       </section>
 
       <HomeBooking initialView={params.view} />

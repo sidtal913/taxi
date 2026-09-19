@@ -107,15 +107,7 @@ export function HomeBooking({ initialView }: HomeBookingProps) {
           aria-labelledby="categories-heading"
           style={{ padding: "8px 16px 16px", flex: 1 }}
         >
-          <h2
-            id="categories-heading"
-            style={{
-              margin: "0 0 12px",
-              fontFamily: "var(--font-display)",
-              fontSize: "1.125rem",
-              fontWeight: 700,
-            }}
-          >
+          <h2 id="categories-heading" className="type-section-title" style={{ marginBottom: 12 }}>
             Choose your ride
           </h2>
           <ul

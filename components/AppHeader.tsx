@@ -32,14 +32,7 @@ export function AppHeader() {
         }}
       >
         <TaxiLogo />
-        <span
-          style={{
-            fontFamily: "var(--font-display)",
-            fontWeight: 700,
-            fontSize: "1.125rem",
-            letterSpacing: "-0.02em",
-          }}
-        >
+        <span className="type-section-title" style={{ fontSize: "1.125rem" }}>
           Mobile Taxi
         </span>
       </Link>
